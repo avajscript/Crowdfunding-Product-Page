@@ -13,6 +13,9 @@ body {
 h1 {
   font-size: 1.6rem;
 }
+h2 {
+  font-size: 1.1rem;
+}
 
 p {
   color: hsl(0, 0%, 48%);
@@ -72,9 +75,37 @@ p {
 .body-base {
   background-color: white;
   border-radius: 0.5rem;
-  padding: 2rem 1rem;
+  padding: 3rem 2rem;
   text-align: center;
   margin-bottom: 2rem;
+}
+
+.inner-base {
+  border: 1px solid #d3d3d3;
+  border-radius: 0.5rem;
+  width: 100%;
+  padding: 30px;
+  margin-top: 2rem;
+  .relative-container {
+    position: relative;
+    margin-bottom: 2rem;
+    p {
+      display: inline-block;
+      margin: 0;
+      position: relative;
+      top: -7px;
+      left: 5px;
+    }
+  }
+  h1 {
+    display: inline-block;
+    font-size: 2rem;
+  }
+
+  h2:nth-of-type(2) {
+    color: hsl(176, 72%, 28%);
+    margin-top: 0.5rem;
+  }
 }
 
 .button {
