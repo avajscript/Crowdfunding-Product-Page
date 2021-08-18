@@ -57,11 +57,35 @@ p {
   .title {
     float: left;
   }
-  .dropdown {
-    float: right;
 
+  .dropdown-button {
+    float: right;
+    cursor: pointer;
     img {
       visibility: visible;
+    }
+  }
+}
+
+.dropdown {
+  background-color: white;
+  position: absolute;
+  width: 90%;
+  margin-left: 5%;
+  top: 90px;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 18px;
+
+  ul {
+    list-style-type: none;
+  }
+  li {
+    padding: 20px;
+    border-bottom: 1px solid #e8e8e8;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
     }
   }
 }
@@ -128,6 +152,7 @@ p {
   float: left;
   line-height: 32px;
   justify-content: center;
+  cursor: pointer;
 }
 
 .black-button {
@@ -177,6 +202,12 @@ p {
     border-bottom: 1px solid grey;
   }
 }
+
+.line {
+  border-bottom: 1px solid #d3d3d3;
+  width: 20%;
+  margin: 0 auto;
+}
 .progress-bar {
   width: 100%;
   background-color: #ebecf0;
@@ -190,6 +221,36 @@ p {
   width: 80%;
   border-radius: 2rem;
 }
+
+.reward-popup {
+  position: absolute;
+  top: 130px;
+  width: 90%;
+  margin-left: 5%;
+}
+.select-icon-container {
+  display: inline-block;
+  padding: 6px;
+  border: 1px solid #d3d3d3;
+  border-radius: 4rem;
+  vertical-align: middle;
+}
+.select-icon {
+  border-radius: 10rem;
+  width: 15px;
+  height: 15px;
+  background-color: hsl(176, 72%, 28%);
+}
+.header-inline {
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.reward-header-container {
+  height: 52px;
+}
+
 // Hide desktop elements
 .desktop-image {
   display: none;
