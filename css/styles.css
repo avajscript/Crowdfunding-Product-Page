@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Commissioner;
+  font-size: 16px;
+  background-color: #fafafa;
+}
+
+h1 {
+  font-size: 1.6rem;
+}
+
+p {
+  color: #7a7a7a;
+  line-height: 2rem;
+  font-weight: 500;
+  margin: 2rem 0;
+}
+
+.flex-seperate {
+  display: flex;
+  justify-content: space-between;
+}
+
+.clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.header img {
+  visibility: hidden;
+  width: 100%;
+}
+
+.header-background-mobile {
+  background: url("../images/image-hero-mobile.jpg");
+  background-size: 100% 100%;
+}
+
+.navbar {
+  position: absolute;
+  color: white;
+  width: 90%;
+  top: 30px;
+  margin-left: 5%;
+  height: 31px;
+  line-height: 31px;
+}
+
+.navbar .title {
+  float: left;
+}
+
+.navbar .dropdown {
+  float: right;
+}
+
+.navbar .dropdown img {
+  visibility: visible;
+}
+
+.main-content-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.body-base {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 2rem 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.button {
+  color: white;
+  background-color: #147b74;
+  border-radius: 4rem;
+  padding: 15px 40px;
+  font-weight: 500;
+  float: left;
+  line-height: 32px;
+  justify-content: center;
+}
+
+.black-button {
+  float: right;
+  position: relative;
+}
+
+.black-button img {
+  height: 59px;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.left-align {
+  text-align: left;
+}
+
+.article-1 {
+  padding-top: 3rem;
+  position: relative;
+  top: -50px;
+}
+
+.logo-wrapper {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+
+.backers h1 {
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+.backers p {
+  margin-top: 0.5rem;
+}
+
+.backers:nth-of-type(1) h1 {
+  margin-top: 0;
+}
+
+.backers:nth-of-type(2) {
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #ebecf0;
+  border-radius: 2rem;
+  height: 20px;
+}
+
+.inner-progress {
+  background-color: #147b74;
+  height: 100%;
+  width: 80%;
+  border-radius: 2rem;
+}
+
+.desktop-image {
+  display: none;
+}
