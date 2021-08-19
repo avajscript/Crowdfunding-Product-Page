@@ -45,6 +45,21 @@ p {
   background: url("../images/image-hero-mobile.jpg");
   background-size: 100% 100%;
 }
+.reward-page-navbar {
+  height: 31px;
+  line-height: 32px;
+  content: "";
+  clear: both;
+
+  .reward-title {
+    float: left;
+  }
+  .close-reward-page {
+    float: right;
+    cursor: pointer;
+  }
+}
+
 .navbar {
   position: absolute;
   color: white;
@@ -129,17 +144,6 @@ p {
   h2:nth-of-type(2) {
     color: hsl(176, 72%, 28%);
     margin-top: 0.5rem;
-  }
-  &:nth-of-type(3) {
-    h2:nth-of-type(2),
-    p,
-    h1,
-    .button {
-      opacity: 0.25;
-    }
-    .button {
-      background-color: black;
-    }
   }
 }
 
@@ -234,12 +238,13 @@ p {
   border: 1px solid #d3d3d3;
   border-radius: 4rem;
   vertical-align: middle;
+  cursor: pointer;
 }
 .select-icon {
   border-radius: 10rem;
   width: 15px;
   height: 15px;
-  background-color: hsl(176, 72%, 28%);
+  background-color: white;
 }
 .header-inline {
   display: inline-block;
@@ -247,8 +252,24 @@ p {
   vertical-align: middle;
 }
 
+.reward-article-3 {
+  h1,
+  h2,
+  p {
+    opacity: 0.5;
+  }
+}
+
 .reward-header-container {
   height: 52px;
+}
+
+.active-border {
+  border: 2px solid hsl(176, 72%, 28%);
+}
+
+.active-icon {
+  background-color: hsl(176, 72%, 28%);
 }
 
 // Hide desktop elements
