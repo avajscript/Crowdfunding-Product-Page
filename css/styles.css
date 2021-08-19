@@ -168,7 +168,7 @@ input::-webkit-out-spin-button, input::-webkit-inner-spin-button {
 
 .button {
   color: white;
-  background-color: #147b74;
+  background-color: #3cb4ac;
   border-radius: 4rem;
   padding: 15px 40px;
   font-weight: 500;
@@ -176,6 +176,10 @@ input::-webkit-out-spin-button, input::-webkit-inner-spin-button {
   line-height: 32px;
   justify-content: center;
   cursor: pointer;
+}
+
+.button:hover {
+  background-color: #147b74;
 }
 
 .height-100 {

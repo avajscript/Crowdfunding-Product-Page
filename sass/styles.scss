@@ -160,7 +160,7 @@ input {
 
 .button {
   color: white;
-  background-color: hsl(176, 72%, 28%);
+  background-color: hsl(176, 50%, 47%);
   border-radius: 4rem;
   padding: 15px 40px;
   font-weight: 500;
@@ -168,6 +168,9 @@ input {
   line-height: 32px;
   justify-content: center;
   cursor: pointer;
+  &:hover {
+    background-color: hsl(176, 72%, 28%);
+  }
 }
 
 .height-100 {
