@@ -3,6 +3,7 @@ window.onload = () => {
   const dropdownButton = document.querySelector(".dropdown-button");
   const dropdown = document.querySelector(".dropdown");
   const rewardbuttons = document.querySelectorAll(".reward-button");
+  const rewardPage = document.querySelector(".reward-popup");
 
   // Functions
 
