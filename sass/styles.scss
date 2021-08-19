@@ -283,18 +283,36 @@ input {
   background-color: hsl(176, 72%, 28%);
 }
 
+.pledge-buttons {
+  height: 62px;
+  width: 100%;
+}
+
 .enter-pledge {
   //border-top: 1px solid #ebecf0;
   text-align: center;
-
+  width: 100%;
   .button {
     float: right;
   }
 }
 
 .pledge-input {
+  margin-right: 2rem;
   border: 1px solid #ebecf0;
-  float: left;
+  float: right;
+  padding: 15px 20px;
+  border-radius: 4rem;
+  width: 120px;
+  height: 62px;
+  background-image:url("../images/") input {
+    text-align: center;
+    outline: none;
+    border: none;
+    width: 80%;
+    line-height: 100%;
+    vertical-align: middle;
+  }
 }
 
 // Hide desktop elements
