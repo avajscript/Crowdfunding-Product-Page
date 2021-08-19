@@ -40,11 +40,12 @@ window.onload = () => {
     pledgePage.style.display = "none";
   }
   // Show pledge-reward page on click
-  function showPledgePage(event) {
+  function showPledgePage(element) {
     // Finds the selected pledge based on the what number it contains (Ex. 1,2,3)
+
     let regex = /[0-9]/g;
-    let rewardIndex = event.target.id.match(regex).join("");
-    highlightPledge(parseInt(rewardIndex) + 1);
+    let rewardIndex = element.id.match(regex).join("");
+    highlightPledge(parseInt(rewardIndex));
     // Display the pledge-reward page
     pledgePage.style.display = "block";
   }
@@ -67,14 +68,16 @@ window.onload = () => {
   dropdownButton.addEventListener("click", toggleDropdown);
 
   pledgebuttons.forEach((button) => {
-    button.addEventListener("click", showPledgePage);
+    button.addEventListener("click", () => {
+      showPledgePage(button);
+    });
   });
 
   closePledgePageButton.addEventListener("click", closePledgePage);
 
   pledgeIcons.forEach((icon) => {
     icon.parentNode.addEventListener("click", () => {
-      console.log(icon);
+      showPledgePage(icon);
     });
   });
 };
