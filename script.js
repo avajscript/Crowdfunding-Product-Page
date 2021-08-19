@@ -17,7 +17,19 @@ window.onload = () => {
     return document.querySelector(`#icon-${i}`);
   });
 
+  const pledgeContinueButtons = document.querySelectorAll(".continue");
+  const thankyouPage = document.querySelector(".thank-you");
+  const thankyouPageButton = document.querySelector("#got-it");
+
   // Functions
+
+  // Display thank you screen when pledge button is clicked
+  function toggleThankyou() {
+    closePledgePage();
+    thankyouPage.style.display == "block"
+      ? (thankyouPage.style.display = "none")
+      : (thankyouPage.style.display = "block");
+  }
 
   function clearPledges() {
     // Goes through each article and removes styling
@@ -80,4 +92,9 @@ window.onload = () => {
       showPledgePage(icon);
     });
   });
+
+  pledgeContinueButtons.forEach((button) => {
+    button.addEventListener("click", toggleThankyou);
+  });
+  thankyouPageButton.addEventListener("click", toggleThankyou);
 };

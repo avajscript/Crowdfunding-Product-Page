@@ -170,6 +170,10 @@ input {
   cursor: pointer;
 }
 
+.height-100 {
+  height: 100%;
+}
+
 .black-button {
   float: right;
   position: relative;
@@ -305,13 +309,38 @@ input {
   border-radius: 4rem;
   width: 120px;
   height: 62px;
-  background-image:url("../images/") input {
+  position: relative;
+
+  p {
+    margin: 0;
+    display: inline-block;
+    color: #ccc;
+    position: relative;
+    right: -10px;
+  }
+  input {
+    height: 32px;
     text-align: center;
     outline: none;
     border: none;
     width: 80%;
     line-height: 100%;
-    vertical-align: middle;
+  }
+}
+
+.thank-you {
+  position: absolute;
+  top: 130px;
+  width: 90%;
+  margin-left: 5%;
+  img {
+    margin-bottom: 2rem;
+  }
+  .button {
+    width: 126px;
+    display: inline-block;
+    margin: 0 auto;
+    float: none;
   }
 }
 
