@@ -24,6 +24,17 @@ p {
   margin: 2rem 0;
 }
 
+input {
+  font-family: Commissioner;
+  font-size: 16px;
+  font-weight: 700;
+  &::-webkit-out-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
 .flex-seperate {
   display: flex;
   justify-content: space-between;
@@ -270,6 +281,20 @@ p {
 
 .active-icon {
   background-color: hsl(176, 72%, 28%);
+}
+
+.enter-pledge {
+  //border-top: 1px solid #ebecf0;
+  text-align: center;
+
+  .button {
+    float: right;
+  }
+}
+
+.pledge-input {
+  border: 1px solid #ebecf0;
+  float: left;
 }
 
 // Hide desktop elements
