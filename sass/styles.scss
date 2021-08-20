@@ -301,10 +301,13 @@ input {
   //border-top: 1px solid #ebecf0;
   text-align: center;
   width: 100%;
-  border-top: 1px solid #d3d3d3;
+
   .button {
     float: right;
   }
+}
+.border-bottom {
+  border-bottom: 1px solid #d3d3d3;
 }
 
 .pledge-input {
@@ -481,5 +484,21 @@ input {
         float: left;
       }
     }
+  }
+  .float-left {
+    float: left;
+
+    p {
+      vertical-align: middle;
+      margin: 0;
+      line-height: 62px;
+    }
+  }
+  .enter-pledge {
+    height: 62px;
+    margin: 2rem 0;
+  }
+  .pledge-button {
+    float: right;
   }
 }
