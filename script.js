@@ -19,6 +19,9 @@ window.onload = () => {
   const enterPledgeDropdowns = [1, 2, 3].map((i) => {
     return document.querySelector(`#enter-pledge-${i}`);
   });
+  const pledgeTopButtons = [1, 2, 3].map((i) => {
+    return document.querySelector(`#pledge-top-button-${i}`);
+  });
 
   const pledgeContinueButtons = document.querySelectorAll(".continue");
   const thankyouPage = document.querySelector(".thank-you");
@@ -26,6 +29,8 @@ window.onload = () => {
 
   // Functions
 
+  // Set background to dark-grey when first reward-buttons are clicked
+  function pledgeBackground() {}
   // Display thank you screen when pledge button is clicked
   function toggleThankyou() {
     closePledgePage();
@@ -89,14 +94,15 @@ window.onload = () => {
   pledgebuttons.forEach((button) => {
     button.addEventListener("click", () => {
       showPledgePage(button);
+      pledgeBackground();
     });
   });
 
   closePledgePageButton.addEventListener("click", closePledgePage);
 
-  pledgeIcons.forEach((icon) => {
-    icon.parentNode.addEventListener("click", () => {
-      showPledgePage(icon);
+  pledgeTopButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      showPledgePage(button);
     });
   });
 
@@ -104,4 +110,12 @@ window.onload = () => {
     button.addEventListener("click", toggleThankyou);
   });
   thankyouPageButton.addEventListener("click", toggleThankyou);
+  document.querySelector(".bookmark-wrapper").addEventListener("click", () => {
+    let bookmarkElements = document.querySelectorAll(".color-bookmark");
+    bookmarkElements.forEach((element) => {
+      element.classList.contains("filter")
+        ? element.classList.remove("filter")
+        : element.classList.add("filter");
+    });
+  });
 };
