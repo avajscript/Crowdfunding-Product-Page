@@ -1,4 +1,8 @@
+// Variables
 $light-grey: #ebecf0;
+$grey: #d3d3d3;
+$light-green: hsl(176, 50%, 47%);
+$dark-green: hsl(176, 72%, 28%);
 
 * {
   margin: 0;
@@ -133,7 +137,7 @@ input {
 }
 
 .inner-base {
-  border: 1px solid #d3d3d3;
+  border: 1px solid $grey;
   border-radius: 0.5rem;
   width: 100%;
   padding: 30px;
@@ -155,14 +159,14 @@ input {
   }
 
   h2:nth-of-type(2) {
-    color: hsl(176, 72%, 28%);
+    color: $light-green;
     margin-top: 0.5rem;
   }
 }
 
 .button {
   color: white;
-  background-color: hsl(176, 50%, 47%);
+  background-color: $light-green;
   border-radius: 4rem;
   padding: 15px 40px;
   font-weight: 500;
@@ -171,7 +175,7 @@ input {
   justify-content: center;
   cursor: pointer;
   &:hover {
-    background-color: hsl(176, 72%, 28%);
+    background-color: $dark-green;
   }
 }
 
@@ -228,7 +232,7 @@ input {
 }
 
 .line {
-  border-bottom: 1px solid #d3d3d3;
+  border-bottom: 1px solid $grey;
   width: 20%;
   margin: 0 auto;
 }
@@ -240,7 +244,7 @@ input {
 }
 
 .inner-progress {
-  background-color: hsl(176, 72%, 28%);
+  background-color: $dark-green;
   height: 100%;
   width: 80%;
   border-radius: 2rem;
@@ -255,7 +259,7 @@ input {
 .select-icon-container {
   display: inline-block;
   padding: 6px;
-  border: 1px solid #d3d3d3;
+  border: 1px solid $grey;
   border-radius: 4rem;
   vertical-align: middle;
   cursor: pointer;
@@ -282,14 +286,20 @@ input {
 
 .reward-header-container {
   height: 52px;
+  &:hover {
+    cursor: pointer;
+  }
+  &:hover h2:nth-of-type(1) {
+    color: $light-green;
+  }
 }
 
 .active-border {
-  border: 2px solid hsl(176, 72%, 28%);
+  border: 2px solid $dark-green;
 }
 
 .active-icon {
-  background-color: hsl(176, 72%, 28%);
+  background-color: $dark-green;
 }
 
 .pledge-buttons {
@@ -298,16 +308,15 @@ input {
 }
 
 .enter-pledge {
-  //border-top: 1px solid #ebecf0;
   text-align: center;
   width: 100%;
-
+  border-top: 1px solid $grey;
   .button {
     float: right;
   }
 }
 .border-bottom {
-  border-bottom: 1px solid #d3d3d3;
+  border-bottom: 1px solid $grey;
 }
 
 .pledge-input {
@@ -361,6 +370,9 @@ input {
 .desktop-image,
 .desktop-nav-right {
   display: none;
+  li {
+    cursor: pointer;
+  }
 }
 
 @media screen and (min-width: 1052px) {
@@ -404,6 +416,7 @@ input {
   .main-content-wrapper {
     width: 50%;
   }
+
   .bookmark-wrapper {
     height: 100%;
 
@@ -433,8 +446,8 @@ input {
   .backers {
     flex: 1;
     &:nth-of-type(3) {
-      border-left: 1px solid #d3d3d3;
-      border-right: 1px solid #d3d3d3;
+      border-left: 1px solid $grey;
+      border-right: 1px solid $grey;
     }
     h1 {
       margin-top: 0;
@@ -466,6 +479,11 @@ input {
     position: relative;
   }
   .reward-popup {
+    width: 50%;
+    left: 50%;
+    margin-left: 0;
+    transform: translate(-50%, 0);
+    min-width: 675px;
     .float-container {
       h2 {
         margin-left: 2rem;
@@ -497,6 +515,7 @@ input {
   .enter-pledge {
     height: 62px;
     margin: 2rem 0;
+    padding-top: 2rem;
   }
   .pledge-button {
     float: right;
