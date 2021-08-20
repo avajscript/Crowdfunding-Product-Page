@@ -309,6 +309,7 @@ input::-webkit-out-spin-button, input::-webkit-inner-spin-button {
 .enter-pledge {
   text-align: center;
   width: 100%;
+  border-top: 1px solid #d3d3d3;
 }
 
 .enter-pledge .button {
@@ -361,6 +362,116 @@ input::-webkit-out-spin-button, input::-webkit-inner-spin-button {
   float: none;
 }
 
-.desktop-image {
+.reward-article-3 .float-container {
+  margin-left: 42px;
+}
+
+.desktop-image,
+.desktop-nav-right {
   display: none;
+}
+
+@media screen and (min-width: 1052px) {
+  .mobile-image {
+    display: none;
+  }
+  .dropdown-button {
+    display: none;
+  }
+  .desktop-image {
+    display: block;
+  }
+  .header-background-desktop {
+    background: url("../images/image-hero-desktop.jpg");
+    background-size: 100% 100%;
+  }
+  .navbar {
+    top: 40px;
+    margin-left: 10%;
+    width: 80%;
+  }
+  .desktop-nav-right {
+    display: block;
+    float: right;
+  }
+  .desktop-nav-right ul {
+    list-style-type: none;
+  }
+  .desktop-nav-right li {
+    display: inline-block;
+    margin-left: 2rem;
+  }
+  .main-content-wrapper {
+    width: 50%;
+  }
+  .bookmark-wrapper {
+    height: 100%;
+    background-color: #ebecf0;
+    border-radius: 4rem;
+  }
+  .bookmark-wrapper img {
+    display: inline-block;
+  }
+  .bookmark-wrapper p {
+    display: inline-block;
+    margin: 0;
+    line-height: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    position: relative;
+    top: -22px;
+  }
+  .flex-container {
+    display: flex;
+  }
+  .margin-bottom {
+    margin-bottom: 2rem;
+  }
+  .backers {
+    flex: 1;
+  }
+  .backers:nth-of-type(3) {
+    border-left: 1px solid #d3d3d3;
+    border-right: 1px solid #d3d3d3;
+  }
+  .backers h1 {
+    margin-top: 0;
+  }
+  .backers p {
+    margin-bottom: 0;
+  }
+  .line {
+    display: none;
+  }
+  .float-container {
+    width: 100%;
+  }
+  .float-container h2:nth-of-type(1) {
+    float: left;
+  }
+  .float-container h2:nth-of-type(2) {
+    float: right;
+    margin-top: 0;
+  }
+  .float-container .relative-container {
+    float: left;
+  }
+  .float-container a {
+    float: right;
+  }
+  .inner-base {
+    position: relative;
+  }
+  .reward-popup .float-container h2 {
+    margin-left: 2rem;
+  }
+  .reward-popup .relative-container {
+    float: none;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+  }
+  .reward-article-3 .float-container h2:nth-of-type(2) {
+    float: left;
+  }
 }

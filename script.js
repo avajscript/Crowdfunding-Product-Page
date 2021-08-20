@@ -16,6 +16,9 @@ window.onload = () => {
   const pledgeIcons = [1, 2, 3].map((i) => {
     return document.querySelector(`#icon-${i}`);
   });
+  const enterPledgeDropdowns = [1, 2, 3].map((i) => {
+    return document.querySelector(`#enter-pledge-${i}`);
+  });
 
   const pledgeContinueButtons = document.querySelectorAll(".continue");
   const thankyouPage = document.querySelector(".thank-you");
@@ -40,12 +43,16 @@ window.onload = () => {
     pledgeIcons.forEach((icon) => {
       icon.classList.remove("active-icon");
     });
+    enterPledgeDropdowns.forEach((pledge) => {
+      pledge.style.display = "none";
+    });
   }
 
   function highlightPledge(pledgeIndex) {
     clearPledges(); // Calls function to remove styling from each pledge article
     pledgePopupArticles[pledgeIndex - 1].classList.add("active-border");
     pledgeIcons[pledgeIndex - 1].classList.add("active-icon");
+    enterPledgeDropdowns[pledgeIndex - 1].style.display = "block";
   }
   // Close pledge-reward page when 'X' is clicked
   function closePledgePage() {

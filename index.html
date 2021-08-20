@@ -23,16 +23,26 @@
           <img src="./images/image-hero-mobile.jpg" alt="header-bg" />
         </div>
 
-        <div class="desktop-image"></div>
+        <div class="desktop-image header-background-desktop">
+          <img src = './images/image-hero-desktop.jpg' alt = 'header-bg'/>
+
+        </div>
         <!-- End of background image -->
 
         <!-- Nav bar-->
-        <div class="navbar clearfix">
+        <div class="navbar clearfix" id="top">
           <div class="title">
             <h1>crowdfund</h1>
           </div>
           <div class="dropdown-button">
             <img src="./images/icon-hamburger.svg" />
+          </div>
+          <div class="desktop-nav-right">
+            <ul>
+              <li>About</li>
+              <li>Discover</li>
+              <li>Get Started</li>
+            </ul>
           </div>
         </div>
         <!-- End of nav bar-->
@@ -63,8 +73,13 @@
           </p>
           <div class="clearfix width-100">
             <div class="button">Back this project</div>
-            <div class="black-button">
-              <img src="./images/icon-bookmark.svg" />
+            <div class="black-button ">
+              <img class = 'mobile-image' src="./images/icon-bookmark.svg" />
+              <div class="bookmark-wrapper desktop-image clearfix">
+                <img class = 'desktop-image' src="./images/icon-bookmark.svg" />
+                <p>Bookmark</p>
+                
+              </div>
             </div>
           </div>
         </article>
@@ -72,7 +87,7 @@
 
         <!-- Second article-->
         <article class="article-2 body-base">
-          <div class="flex-container">
+          <div class="flex-container margin-bottom">
             <div class="backers">
               <h1>$89,914</h1>
               <p>of $100,100 backed</p>
@@ -118,42 +133,58 @@
 
           <!-- Inner article 1 -->
           <div class="inner-base clearfix">
+            <div class="float-container clearfix">
             <h2>Bamboo Stand</h2>
             <h2>Pledge $25 or more</h2>
+            </div>
             <p>
               You get an ergonomic stand made of natural bamboo. You've helped
               us launch our promotionl campaign, and you'll be added t oa
               special Backer member list.
             </p>
+            <div class="float-container clearfix">
             <div class="relative-container">
               <h1>101</h1>
               <p>left</p>
             </div>
+            <a href="#top">
             <div id="reward-2" class="button reward-button">Select Reward</div>
+            </div>
           </div>
+          </a>
           <!-- End of inner article 1 -->
 
           <!-- Inner article 2 -->
           <div class="inner-base clearfix">
+            <div class="float-container ">
             <h2>Black Edition Stand</h2>
             <h2>Pledge $75 or more</h2>
+            </div>
             <p>
               You get a Black Special Edition computer stand and a personal
               thank you. You'll be added to our Backer member list. Shipping is
               included.
             </p>
+            <div class="float-container clearfix">
             <div class="relative-container">
               <h1>64</h1>
               <p>left</p>
             </div>
-            <div id="reward-3" class="button reward-button">Select Reward</div>
+            <a href="#top">
+              <div id="reward-3" class="button reward-button">
+                Select Reward
+              </div>
+            </a>
+            </div>
           </div>
           <!-- End of inner article 2-->
 
           <!-- Inner article 3-->
           <div class="inner-base clearfix reward-article-3">
+            <div class="float-container clearfix">
             <h2>Mahogany Special Edition</h2>
             <h2>Pledge $200 or more</h2>
+            </div>
             <p>
               You get two Special Edition Mahogany stands, a Backer T-Shirt, and
               a personal thank you. You'll be added to our Backer member list.
@@ -170,8 +201,11 @@
       </div>
       <!-- End of center content-->
 
-      <!-- Third article -->
-      <article class="article-3 body-base left-align reward-popup">
+      <!-- Pledge pop-up -->
+      <article
+        class="article-3 body-base left-align reward-popup"
+        
+      >
         <!-- Header -->
         <header>
           <div class="reward-page-navbar">
@@ -204,10 +238,12 @@
             project. As a backer, you will be signed up to receive product
             updates via email.
           </p>
-          <div id="enter-pledge-1" class="enter-pledge clearfix">
+          <div style = 'display:none'id="enter-pledge-1" class="enter-pledge clearfix">
             <p>Enter your pledge</p>
             <div class="pledge-buttons">
+              <a href = '#'>
               <div class="button continue">Continue</div>
+              </a>
               <div class="pledge-input">
                 <p>$</p>
                 <input type="number" value="5" />
@@ -224,8 +260,10 @@
               <div id="icon-2" class="select-icon"></div>
             </div>
             <div class="header-inline">
+              <div class="float-container">
               <h2>Bamboo Stand</h2>
               <h2>Pledge $25 or more</h2>
+              </div>
             </div>
           </div>
           <p>
@@ -239,10 +277,12 @@
             <p>left</p>
           </div>
 
-          <div id="enter-pledge-1" class="enter-pledge clearfix">
+          <div style = 'display:none' id="enter-pledge-2" class="enter-pledge clearfix">
             <p>Enter your pledge</p>
             <div class="pledge-buttons">
+              <a href = '#top'>
               <div class="button continue">Continue</div>
+              </a>
               <div class="pledge-input">
                 <p>$</p>
                 <input type="number" value="25" />
@@ -259,8 +299,10 @@
               <div id="icon-3" class="select-icon"></div>
             </div>
             <div class="header-inline">
+              <div class="float-container">
               <h2>Black Edition Stand</h2>
               <h2>Pledge $75 or more</h2>
+              </div>
             </div>
           </div>
           <p>
@@ -273,10 +315,12 @@
             <p>left</p>
           </div>
 
-          <div id="enter-pledge-1" class="enter-pledge clearfix">
+          <div style = 'display:none' id="enter-pledge-3" class="enter-pledge clearfix">
             <p>Enter your pledge</p>
             <div class="pledge-buttons">
+              <a href = '#top'>
               <div class="button continue">Continue</div>
+              </a>
               <div class="pledge-input">
                 <p>$</p>
                 <input type="number" value="75" />
@@ -288,8 +332,10 @@
 
         <!-- Inner article 3-->
         <div class="inner-base clearfix reward-article-3 height-100">
+          <div class="float-container">
           <h2>Mahogany Special Edition</h2>
           <h2>Pledge $200 or more</h2>
+          </div>
           <p>
             You get two Speical Edition Mahogany stands, a Backet T-Shirt, and a
             personal thank you. You'll be added to our Backer member list.
@@ -301,7 +347,7 @@
           </div>
         </div>
       </article>
-      <!-- End of inner article 3 -->
+      <!-- End pledge pop-up -->
 
       <div style="display: none" class="thank-you body-base clearfix">
         <img src="./images/icon-check.svg" />
