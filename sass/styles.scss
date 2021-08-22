@@ -9,7 +9,17 @@ $dark-green: hsl(176, 72%, 28%);
   padding: 0;
   box-sizing: border-box;
 }
-
+.abs-cover {
+  z-index: 1;
+  position: absolute;
+  opacity: 0.5;
+  width: 100%;
+  height: 4000px;
+  background-color: black !important;
+  li {
+    color: red !important;
+  }
+}
 body {
   font-family: Commissioner;
   font-size: 16px;
@@ -39,6 +49,10 @@ input {
     -webkit-appearance: none;
     margin: 0;
   }
+}
+
+.zIndex {
+  z-index: 2;
 }
 
 .flex-seperate {
@@ -85,6 +99,7 @@ input {
   margin-left: 5%;
   height: 31px;
   line-height: 31px;
+  z-index: 2;
 
   .title {
     float: left;
@@ -100,6 +115,7 @@ input {
 }
 
 .dropdown {
+  z-index: 2;
   background-color: white;
   position: absolute;
   width: 90%;
@@ -252,6 +268,7 @@ input {
 
 .reward-popup {
   position: absolute;
+  z-index: 2;
   top: 130px;
   width: 90%;
   margin-left: 5%;
@@ -348,6 +365,7 @@ input {
 
 .thank-you {
   position: absolute;
+  z-index: 2;
   top: 130px;
   width: 90%;
   margin-left: 5%;
@@ -416,12 +434,24 @@ input {
   .main-content-wrapper {
     width: 50%;
   }
+  .filter {
+    filter: invert(34%) sepia(78%) saturate(448%) hue-rotate(127deg)
+      brightness(98%) contrast(90%);
+  }
 
   .bookmark-wrapper {
     height: 100%;
-
     background-color: $light-grey;
     border-radius: 4rem;
+    cursor: pointer;
+    &:hover img {
+      filter: invert(100%) sepia(0%) saturate(1666%) hue-rotate(266deg)
+        brightness(72%) contrast(76%);
+    }
+    &:hover p {
+      filter: invert(100%) sepia(0%) saturate(1666%) hue-rotate(266deg)
+        brightness(72%) contrast(76%);
+    }
     img {
       display: inline-block;
     }
@@ -519,5 +549,10 @@ input {
   }
   .pledge-button {
     float: right;
+  }
+
+  .thank-you {
+    width: 50%;
+    margin-left: 25%;
   }
 }

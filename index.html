@@ -15,7 +15,12 @@
     <title>Document</title>
   </head>
   <body>
+    
     <div class="main">
+      <div class="abs-cover" style='display:none'></div>
+      
+        
+      
       <!-- Header -->
       <header class="header">
         <!-- Background image-->
@@ -76,8 +81,8 @@
             <div class="black-button ">
               <img class = 'mobile-image' src="./images/icon-bookmark.svg" />
               <div class="bookmark-wrapper desktop-image clearfix">
-                <img class = 'desktop-image' src="./images/icon-bookmark.svg" />
-                <p>Bookmark</p>
+                <img class = 'desktop-image color-bookmark y' src="./images/icon-bookmark.svg" />
+                <p class = 'color-bookmark x'>Bookmark</p>
                 
               </div>
             </div>
@@ -139,7 +144,7 @@
             </div>
             <p>
               You get an ergonomic stand made of natural bamboo. You've helped
-              us launch our promotionl campaign, and you'll be added t oa
+              us launch our promotionl campaign, and you'll be added to a
               special Backer member list.
             </p>
             <div class="float-container clearfix">
@@ -200,9 +205,9 @@
         <!-- End of third article -->
       </div>
       <!-- End of center content-->
-
+      
       <!-- Pledge pop-up -->
-      <article
+      <article style= 'display:none'
         class="article-3 body-base left-align reward-popup"
         
       >
@@ -226,7 +231,7 @@
         <!-- Header -->
         <div class="inner-base reward-popup-1">
           
-          <div class="reward-header-container height-100">
+          <div id = 'pledge-top-button-1' class="reward-header-container height-100">
             <div class="select-icon-container">
               <div id="icon-1" class="select-icon"></div>
             </div>
@@ -261,7 +266,7 @@
         <!-- Inner article 1 -->
         <div class="inner-base clearfix reward-popup-2 height-100">
           
-          <div class="reward-header-container">
+          <div id = 'pledge-top-button-2' class="reward-header-container">
             <div class="select-icon-container">
               <div id="icon-2" class="select-icon"></div>
             </div>
@@ -304,7 +309,7 @@
         <!-- Inner article 2 -->
         <div class="inner-base clearfix reward-popup-3 height-100">
           
-          <div class="reward-header-container">
+          <div id = 'pledge-top-button-3' class="reward-header-container">
             <div class="select-icon-container">
               <div id="icon-3" class="select-icon"></div>
             </div>
@@ -375,5 +380,6 @@
       </div>
     </div>
     <!-- End of main-->
+    
   </body>
 </html>

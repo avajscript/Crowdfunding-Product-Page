@@ -4,6 +4,19 @@
   box-sizing: border-box;
 }
 
+.abs-cover {
+  z-index: 1;
+  position: absolute;
+  opacity: 0.5;
+  width: 100%;
+  height: 4000px;
+  background-color: black !important;
+}
+
+.abs-cover li {
+  color: red !important;
+}
+
 body {
   font-family: Commissioner;
   font-size: 16px;
@@ -34,6 +47,10 @@ input {
 input::-webkit-out-spin-button, input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.zIndex {
+  z-index: 2;
 }
 
 .flex-seperate {
@@ -81,6 +98,7 @@ input::-webkit-out-spin-button, input::-webkit-inner-spin-button {
   margin-left: 5%;
   height: 31px;
   line-height: 31px;
+  z-index: 2;
 }
 
 .navbar .title {
@@ -97,6 +115,7 @@ input::-webkit-out-spin-button, input::-webkit-inner-spin-button {
 }
 
 .dropdown {
+  z-index: 2;
   background-color: white;
   position: absolute;
   width: 90%;
@@ -256,6 +275,7 @@ input::-webkit-out-spin-button, input::-webkit-inner-spin-button {
 
 .reward-popup {
   position: absolute;
+  z-index: 2;
   top: 130px;
   width: 90%;
   margin-left: 5%;
@@ -358,6 +378,7 @@ input::-webkit-out-spin-button, input::-webkit-inner-spin-button {
 
 .thank-you {
   position: absolute;
+  z-index: 2;
   top: 130px;
   width: 90%;
   margin-left: 5%;
@@ -421,10 +442,20 @@ input::-webkit-out-spin-button, input::-webkit-inner-spin-button {
   .main-content-wrapper {
     width: 50%;
   }
+  .filter {
+    filter: invert(34%) sepia(78%) saturate(448%) hue-rotate(127deg) brightness(98%) contrast(90%);
+  }
   .bookmark-wrapper {
     height: 100%;
     background-color: #ebecf0;
     border-radius: 4rem;
+    cursor: pointer;
+  }
+  .bookmark-wrapper:hover img {
+    filter: invert(100%) sepia(0%) saturate(1666%) hue-rotate(266deg) brightness(72%) contrast(76%);
+  }
+  .bookmark-wrapper:hover p {
+    filter: invert(100%) sepia(0%) saturate(1666%) hue-rotate(266deg) brightness(72%) contrast(76%);
   }
   .bookmark-wrapper img {
     display: inline-block;
@@ -513,5 +544,9 @@ input::-webkit-out-spin-button, input::-webkit-inner-spin-button {
   }
   .pledge-button {
     float: right;
+  }
+  .thank-you {
+    width: 50%;
+    margin-left: 25%;
   }
 }

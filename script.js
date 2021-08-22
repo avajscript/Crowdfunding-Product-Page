@@ -6,6 +6,7 @@ window.onload = () => {
   const pledgebuttons = document.querySelectorAll(".reward-button");
   const pledgePage = document.querySelector(".reward-popup");
   const closePledgePageButton = document.querySelector(".close-reward-page");
+  const backgroundCover = document.querySelector(".abs-cover");
 
   // Creates list of pledge articles based on the number in their id (Ex. 1,2,3)
   const pledgePopupArticles = [1, 2, 3].map((i) => {
@@ -29,14 +30,32 @@ window.onload = () => {
 
   // Functions
 
+  // Set background to dark-mode
+  function navbarClick() {
+    backgroundOverlay();
+  }
+  function backgroundOverlay(hide) {
+    backgroundCover.style.display == "none"
+      ? (backgroundCover.style.display = "block")
+      : (backgroundCover.style.display = "none");
+
+    if (hide === true) {
+      backgroundCover.style.display = "none";
+    }
+  }
+
   // Set background to dark-grey when first reward-buttons are clicked
   function pledgeBackground() {}
   // Display thank you screen when pledge button is clicked
   function toggleThankyou() {
     closePledgePage();
-    thankyouPage.style.display == "block"
-      ? (thankyouPage.style.display = "none")
-      : (thankyouPage.style.display = "block");
+    if (thankyouPage.style.display == "block") {
+      thankyouPage.style.display = "none";
+      backgroundOverlay(true);
+    } else {
+      thankyouPage.style.display = "block";
+      backgroundOverlay();
+    }
   }
 
   function clearPledges() {
@@ -61,6 +80,7 @@ window.onload = () => {
   }
   // Close pledge-reward page when 'X' is clicked
   function closePledgePage() {
+    backgroundOverlay(); // Toggles the background shade
     pledgePage.style.display = "none";
   }
   // Show pledge-reward page on click
@@ -71,6 +91,7 @@ window.onload = () => {
     let rewardIndex = element.id.match(regex).join("");
     highlightPledge(parseInt(rewardIndex));
     // Display the pledge-reward page
+
     pledgePage.style.display = "block";
   }
 
@@ -90,11 +111,12 @@ window.onload = () => {
   // Event Listeners
 
   dropdownButton.addEventListener("click", toggleDropdown);
+  dropdownButton.addEventListener("click", backgroundOverlay);
 
   pledgebuttons.forEach((button) => {
     button.addEventListener("click", () => {
       showPledgePage(button);
-      pledgeBackground();
+      navbarClick();
     });
   });
 
