@@ -100,10 +100,10 @@ window.onload = () => {
     let img = "";
     if (dropdown.style.display == "none") {
       dropdown.style.display = "block";
-      img = "../images/icon-close-menu.svg";
+      img = "./images/icon-close-menu.svg";
     } else {
       dropdown.style.display = "none";
-      img = "../images/icon-hamburger.svg";
+      img = "./images/icon-hamburger.svg";
     }
     dropdownButton.firstElementChild.src = img;
   }
